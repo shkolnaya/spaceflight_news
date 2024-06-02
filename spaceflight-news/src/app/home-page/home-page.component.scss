@@ -1,0 +1,10 @@
+.container{
+    margin: 0 auto;
+    width: 1300px;
+    
+    .articles{
+        display: flex;
+        gap: 45px;
+        flex-wrap: wrap;
+    }
+}
