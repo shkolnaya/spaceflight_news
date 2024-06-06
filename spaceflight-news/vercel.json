@@ -1,0 +1,14 @@
+{
+    "builds": [
+      {
+        "src": "dist/spaceflight-news/**",
+        "use": "@vercel/static"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/index.html"
+      }
+    ]
+  }
