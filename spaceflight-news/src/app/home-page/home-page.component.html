@@ -1,10 +1,38 @@
 <div class="container">
     <div class="header">
-        Filter
+        <app-filter [keywords]="keywords" (onKeywordChange)="keywordsChanged($event)"></app-filter>
+        <div class="results">Results: {{totalCount}}</div>
     </div>
-    <div class="articles">
-        @for (article of articles; track article){
-            <app-thumbnail [article]="article"></app-thumbnail>
-        }
-    </div>
+    @if (isLoading) {
+        <div class="loading">
+            <mat-spinner></mat-spinner>
+        </div>
+    }
+    @else if (totalCount == 0) {
+        <div class="empty">
+            There are no articles with such keywords
+        </div>
+    }
+    @else {
+        <div class="articles">
+            
+            @for (article of articles; track article.id){
+                <app-thumbnail [article]="article" [keywords]="keywords"></app-thumbnail>
+            }
+        
+        </div>
+
+        <div class="more">
+            <button mat-raised-button (click)="processData()">Load more</button>
+        </div>
+        <!-- <mat-paginator 
+            [length]="totalCount"
+            [pageSize]="pageSize"
+            [pageIndex]="pageIndex"
+            [pageSizeOptions]="[6, 12, 18]"
+            aria-label="Select page"
+            (page)="handlePageEvent($event)"
+            >
+        </mat-paginator> -->
+    }
 </div>

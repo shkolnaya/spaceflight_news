@@ -1,7 +1,16 @@
-.background{
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    position: relative;
+}
+
+.image{
     width: 100%;
     height: 245px;
     overflow: hidden;
+    
 
     img{
         width: 100%;
@@ -11,27 +20,56 @@
 
 }
 
-.article{
+.content{
     position: absolute;
     top: 150px;
-    width: 1290px;
+    max-width: 1290px;
+    width: calc(100% - 30px);
     margin: 0 auto;
-    background-color: #fff;
-    padding: 35px 75px;
-    border: 1px solid #EAEAEA;
-    box-shadow: 0px 8px 24px 0px #0000000D;
     left: 50%;
     transform: translate(-50%);
 
+    .article{
+        background-color: #fff;
+        padding: 35px 75px;
+        border: 1px solid #EAEAEA;
+        box-shadow: 0px 8px 24px 0px #0000000D;
 
+        .title{
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
 
-    .title{
-        font-size: 24px;
-        text-align: center;
-        margin-bottom: 50px;
+        .summary{
+            font-size: 18px;
+            font-style: italic;
+            font-weight: 500;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+    
+        .description{
+            font-size: 18px;
+        }
+
     }
 
-    .subtitle{
-        font-size: 18px;
+    .back{
+        margin: 35px 75px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        svg{
+            margin-right: 6px;
+        }
+    
     }
+
+
+
+
 }
+
