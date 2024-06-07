@@ -4,7 +4,8 @@
 }
 
 .input{
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
     background-color: #fff;
     border: 1px solid #EAEAEA;
     border-radius: 5px;
@@ -26,5 +27,42 @@
             color: #575757;
             font-family: "Montserrat", sans-serif; 
         }
+    }
+}
+
+@media (max-width: 768px) {
+    .input {
+        padding: 10px 15px;
+        gap: 15px;
+        width: 100%;
+        max-width: none;
+    }
+
+    .title {
+        font-size: 18px;
+    }
+
+    .icon svg {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .input {
+        padding: 8px 10px;
+        gap: 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .title {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .icon svg {
+        width: 16px;
+        height: 16px;
     }
 }
