@@ -1,27 +1,48 @@
-# SpaceflightNews
+# Project Name: Spaceflight News
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
+## Overview
 
-## Development server
+This project aims to create a Single Page Application (SPA) using Angular framework. The application will display a list of articles fetched from an open API, allowing users to filter articles by keywords and view the full details of each article.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Prerequisites
 
-## Code scaffolding
+Before running this project, make sure you have the following installed:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Node.js
+- Angular CLI
 
-## Build
+## Installation
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. Clone this repository to your local machine.
+2. Navigate to the project directory in your terminal.
+3. Run `npm install` to install all dependencies.
 
-## Running unit tests
+## Usage
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. After installation, run `ng serve` to start the development server.
+2. Open your browser and navigate to `http://localhost:4200` to view the application.
 
-## Running end-to-end tests
+## Features
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- Display article cards with titles and short descriptions.
+- Clicking on a card navigates the user to the full article page.
+- Filter articles by keyword.
+- Priority on matching keywords: title > description.
+- Utilizes CSS preprocessors and Material UI for styling.
+- Includes examples of state management and RxJS usage.
 
-## Further help
+## Figma Prototype
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+For the design and layout of the application, refer to the Figma low-fidelity prototype provided [here](link).
+
+## API
+
+The application fetches article data from an open API. As an example, it currently uses the Spaceflight News API, accessible at [https://spaceflightnewsapi.net/](https://spaceflightnewsapi.net/).
+
+## State Management
+
+This project demonstrates an example of state management within an Angular application. State management is achieved using Angular services and RxJS Observables.
+
+## Contributors
+
+- Angelina Shkolna - Developer

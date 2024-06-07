@@ -16,10 +16,15 @@ export class ArticlesService extends BaseService{
 
   getFilteredArticles(filters: any): Observable<ArticlesResult> {
     const params = new URLSearchParams(filters).toString();
-    return this.get<ArticlesResult>(`articles?${params}`)
+    return this.get<ArticlesResult>(`articles/?${params}`);
   }
 
   getArticleById(id: string): Observable<Article> {
-    return this.get<Article>(`articles/${id}`)
+    return this.get<Article>(`articles/${id}`);
   }
+
+  getArticlesByNextUrl(url: string): Observable<ArticlesResult> {
+    return this.getByUrl(url);
+  }
+
 }

@@ -15,4 +15,8 @@ export class BaseService {
   protected get<T>(url: string): Observable<T> {
     return this.httpClient.get<T>(`${this.apiUrl}/${url}`);
   }
+
+  protected getByUrl<T>(url: string): Observable<T> {
+    return this.httpClient.get<T>(url);
+  }
 }

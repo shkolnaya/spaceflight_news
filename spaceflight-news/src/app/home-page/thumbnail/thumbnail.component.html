@@ -18,11 +18,11 @@
                     </clipPath>
                 </defs>
             </svg>
-            <div>{{article.published_at}}</div>
+            <div>{{article.published_at | date}}</div>
             
         </div>
-        <div class="title">{{article.title}}</div>
-        <div class="description">{{article.summary | truncate: 100}}</div>
+        <div class="title" [innerHTML]="article.title | keywords: keywords"></div>
+        <div class="description" [innerHTML]="article.summary | truncate: 100 | keywords: keywords"></div>
         <div class="more">
             <div>Read more</div>
             <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">

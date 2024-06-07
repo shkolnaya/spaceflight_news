@@ -1,10 +1,64 @@
 .container{
     margin: 0 auto;
-    width: 1300px;
+    max-width: 1300px;
+    padding: 0 15px;
+
+    .header{
+        margin: 45px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .results{
+            font-weight: 600;
+            padding: 5px 0;
+            margin-top: 35px;
+            width: 100%;
+            border-bottom: 1px solid #EAEAEA;
+        }
+    }
+
+    .loading, .empty{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     
     .articles{
         display: flex;
         gap: 45px;
         flex-wrap: wrap;
+    }
+    
+    .more {
+        display: flex;
+        justify-content: center;
+        padding: 35px 0;
+    }
+
+    mat-paginator{
+        margin: 25px 0;
+    }
+
+    @media screen and (max-width: 768px) {
+        .header {
+            margin-top: 20px;
+        }
+
+        .articles {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        .header {
+            margin-top: 10px;
+        }
+
+        .articles {
+            margin: 0;
+        }
     }
 }
